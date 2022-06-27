@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:33:50 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/06/27 18:17:02 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/06/27 19:03:48 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ int	parse_list_int(char **argv)
 	list_a = free_list(list_a);
 	return (0);
 }
-
+/*probleme a regler avec la fonction ci dessous
+des ints supplementaires sont inserés dans la liste
+si l'int dépasse le digit... A REGLER*/
 int	parse_list_str(char *str)
 {
 	t_list	*list_a;
@@ -50,6 +52,8 @@ int	parse_list_str(char *str)
 		if (str[i] == ' ')
 			i++;
 		data = ft_atoi(&str[i]);
+		if (str[i] == '-')
+			i++;
 		list_a = add_at(list_a, data, j);
 		i++;
 		j++;
