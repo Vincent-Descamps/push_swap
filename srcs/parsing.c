@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:33:50 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/06/27 19:03:48 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/06/27 20:19:58 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	parse_list_int(char **argv)
 {
 	t_list	*list_a;
+	t_env	*env;
 	int		i;
 	int		j;
 	int		data;
@@ -30,6 +31,9 @@ int	parse_list_int(char **argv)
 		list_a = add_at(list_a, data, j);
 		j++;
 	}
+	print_list(list_a);
+	printf("****************\n");
+	move_sa(list_a);
 	print_list(list_a);
 	list_a = free_list(list_a);
 	return (0);

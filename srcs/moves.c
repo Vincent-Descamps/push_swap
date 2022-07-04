@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/06/27 19:18:06 by vdescamp         ###   ########.fr       */
+/*   Created: 2022/06/27 19:08:29 by vdescamp          #+#    #+#             */
+/*   Updated: 2022/06/28 09:07:16 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-char	*ft_error(void)
+int	move_sa(t_list	*list_a)
 {
-	write(1, "Error\n", 6);
-	exit (0);
-}
+	int	temp;
 
-int	main(int argc, char **argv)
-{
-	if (argc == 1)
-		ft_error();
-	if (argc == 2)
-		parse_list_str(argv[1]);
-	if (argc > 2)
-		parse_list_int(argv);
+	if (list_a->data && list_a->next)
+	{
+		temp = list_a->data;
+		list_a->data = list_a->next;
+		list_a->next = temp;
+	}
 	return (0);
 }
