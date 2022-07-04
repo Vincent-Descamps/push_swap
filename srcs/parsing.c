@@ -6,16 +6,14 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:33:50 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 10:18:29 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/04 11:19:59 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	parse_list_int(char **argv)
+int	parse_list_int(char **argv, t_list	*list_a)
 {
-	t_list	*list_a;
-	t_list	*l;
 	int		i;
 	int		j;
 	int		data;
@@ -41,9 +39,8 @@ int	parse_list_int(char **argv)
 /*probleme a regler avec la fonction ci dessous
 des ints supplementaires sont inserés dans la liste
 si l'int dépasse le digit... A REGLER*/
-int	parse_list_str(char *str)
+int	parse_list_str(char *str, t_list *list_a)
 {
-	t_list	*list_a;
 	int		data;
 	char	**tab;
 	int		i;

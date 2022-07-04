@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/06/27 19:18:06 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/04 11:20:06 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,16 @@ char	*ft_error(void)
 
 int	main(int argc, char **argv)
 {
+	t_list	*list_a;
+	t_list	*list_b;
+
+	list_a = empty_list();
+	list_b = empty_list();
 	if (argc == 1)
 		ft_error();
 	if (argc == 2)
-		parse_list_str(argv[1]);
+		parse_list_str(argv[1], list_a);
 	if (argc > 2)
-		parse_list_int(argv);
+		parse_list_int(argv, list_a);
 	return (0);
 }

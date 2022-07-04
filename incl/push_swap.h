@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 10:15:53 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/04 11:12:24 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ typedef struct s_env
 	t_list	*list_b;
 }	t_env;
 
-int		parse_list_str(char *str);
-int		parse_list_int(char **argv);
+int		parse_list_str(char *str, t_list *list_a);
+int		parse_list_int(char **argv, t_list *list_b);
 t_list	*empty_list(void);
 int		is_empty_list(t_list *L);
 t_list	*add_at(t_list *L, int data, int pos);
