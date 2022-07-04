@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:33:50 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/06/27 20:19:58 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/04 10:18:29 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	parse_list_int(char **argv)
 {
 	t_list	*list_a;
-	t_env	*env;
+	t_list	*l;
 	int		i;
 	int		j;
 	int		data;
@@ -45,23 +45,23 @@ int	parse_list_str(char *str)
 {
 	t_list	*list_a;
 	int		data;
+	char	**tab;
 	int		i;
 	int		j;
 
+	tab = ft_split(str, ' ');
 	list_a = empty_list();
-	i = 0;
+	i = -1;
 	j = 0;
-	while (str[i])
+	while (tab[++i])
 	{
-		if (str[i] == ' ')
-			i++;
-		data = ft_atoi(&str[i]);
-		if (str[i] == '-')
-			i++;
+		data = ft_atoi(tab[i]);
 		list_a = add_at(list_a, data, j);
-		i++;
 		j++;
 	}
+	print_list(list_a);
+	printf("****************\n");
+	move_sa(list_a);
 	print_list(list_a);
 	list_a = free_list(list_a);
 	return (0);

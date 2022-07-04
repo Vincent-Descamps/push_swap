@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/06/28 09:05:58 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/04 10:15:53 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ t_list	*free_list(t_list *L);
 int		ft_atoi(const char *str);
 char	*ft_error(void);
 int		move_sa(t_list	*list_a);
+char	**ft_split(char const *s, char c);
 
 #endif
