@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 09:28:08 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/04 11:43:49 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,4 @@ void	print_list(t_list *L)
 		printf("%d\n", L->data);
 		L = L->next;
 	}
-	printf("\n");
 }
