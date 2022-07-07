@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:08:29 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 10:16:50 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/07 06:49:54 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,9 @@ int	move_sa(t_list	*list)
 	}
 	return (0);
 }
+
+void	move_pa(t_list	*list_a, t_list	*list_b)
+{
+
+}
+
