@@ -6,13 +6,13 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:33:50 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 11:19:59 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/06 15:33:48 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	parse_list_int(char **argv, t_list	*list_a)
+t_list	*parse_list_int(char **argv, t_list	*list_a)
 {
 	int		i;
 	int		j;
@@ -31,15 +31,10 @@ int	parse_list_int(char **argv, t_list	*list_a)
 	}
 	print_list(list_a);
 	printf("****************\n");
-	move_sa(list_a);
-	print_list(list_a);
-	list_a = free_list(list_a);
-	return (0);
+	return (list_a);
 }
-/*probleme a regler avec la fonction ci dessous
-des ints supplementaires sont inserés dans la liste
-si l'int dépasse le digit... A REGLER*/
-int	parse_list_str(char *str, t_list *list_a)
+
+t_list	*parse_list_str(char *str, t_list *list_a)
 {
 	int		data;
 	char	**tab;
@@ -58,8 +53,5 @@ int	parse_list_str(char *str, t_list *list_a)
 	}
 	print_list(list_a);
 	printf("****************\n");
-	move_sa(list_a);
-	print_list(list_a);
-	list_a = free_list(list_a);
-	return (0);
+	return (list_a);
 }

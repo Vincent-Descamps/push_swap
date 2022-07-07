@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 11:20:06 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/06 16:26:07 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,13 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		ft_error();
 	if (argc == 2)
-		parse_list_str(argv[1], list_a);
+		list_a = parse_list_str(argv[1], list_a);
 	if (argc > 2)
-		parse_list_int(argv, list_a);
+		list_a = parse_list_int(argv, list_a);
+	move_pa(list_a, list_b);
+	printf("list_a:\n");
+	print_list(list_a);
+	printf("list_b:\n");
+	print_list(list_b);
 	return (0);
 }

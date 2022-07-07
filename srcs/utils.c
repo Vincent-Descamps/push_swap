@@ -6,15 +6,13 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 09:28:08 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/06 16:20:02 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-static t_list	*create_cell(int data);
-
-static t_list	*create_cell(int data)
+t_list	*create_cell(int data)
 {
 	t_list	*cell;
 
@@ -61,6 +59,34 @@ t_list	*add_at(t_list *L, int data, int pos)
 	}
 	prec->next = cell;
 	cell->next = cur;
+	return (L);
+}
+
+t_list	*free_at(t_list *L, int pos)
+{
+	t_list	*prec;
+	t_list	*cur;
+	t_list	*cell;
+	int		i;
+
+	prec = L;
+	cur = L;
+	if (is_empty_list(L))
+		return (NULL);
+	if (pos == 0)
+	{
+		L = L->next;
+		free(cur);
+		return (L);
+	}
+	i = 0;
+	while (i++ < pos)
+	{
+		prec = cur;
+		cur = cur->next;
+	}
+	prec->next = cur->next;
+	free(cur);
 	return (L);
 }
 
