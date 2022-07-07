@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/07 08:37:58 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/07 09:23:33 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ t_list	*free_at(t_list *L, int pos)
 {
 	t_list	*prec;
 	t_list	*cur;
-	t_list	*cell;
 	int		i;
 
 	prec = L;
@@ -106,6 +105,8 @@ t_list	*free_list(t_list *L)
 
 void	print_list(t_list *L)
 {
+	if (is_empty_list(L))
+		printf("NULL\n");
 	while (L)
 	{
 		printf("%d\n", L->data);

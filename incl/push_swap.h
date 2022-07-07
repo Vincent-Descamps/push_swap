@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/06 17:07:27 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/07 10:37:45 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int		is_empty_list(t_list *L);
 void	print_list(t_list *L);
 int		ft_atoi(const char *str);
 char	*ft_error(void);
-int		move_sa(t_list	*list_a);
-void	move_pa(t_list	*list_a, t_list	*list_b);
+void	move_sa(t_list	*list_a);
+void	move_pb(t_list	**list_a, t_list	**list_b);
 char	**ft_split(char const *s, char c);
 
 #endif
