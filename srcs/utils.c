@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/07 09:23:33 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:16:46 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,19 @@ t_list	*empty_list(void)
 int	is_empty_list(t_list *L)
 {
 	return (L == NULL);
+}
+
+int	list_len(t_list *L)
+{
+	int	i;
+
+	i = 0;
+	while (L)
+	{
+		i++;
+		L = L->next;
+	}
+	return (i);
 }
 
 t_list	*add_at(t_list *L, int data, int pos)
