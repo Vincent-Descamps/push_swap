@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/08 10:00:57 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:20:11 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,13 @@ t_list	*free_at(t_list *L, int pos);
 t_list	*free_list(t_list *L);
 t_list	*create_cell(int data);
 int		is_empty_list(t_list *L);
+int		list_len(t_list *L);
 void	print_list(t_list *L);
 int		ft_atoi(const char *str);
 char	*ft_error(void);
-void	move_sa(t_list	**list_a);
-void	move_pb(t_list	**list_a, t_list	**list_b);
+void	swap(t_list	**list_a);
+void	push(t_list	**list_a, t_list	**list_b);
+void	rotate(t_list	**list);
 char	**ft_split(char const *s, char c);
 
 #endif
