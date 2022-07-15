@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/11 15:16:46 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/15 13:35:16 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,43 @@ t_list	*free_list(t_list *L)
 		L = tmp;
 	}
 	return (L);
+}
+
+void	print_elem(t_list *L, int pos)
+{
+	int		i;
+
+	i = 0;
+	if (pos > list_len(L))
+	{
+		printf("print_elem : position given higher than length of list...\n");
+		exit (0);
+	}
+	while (i<pos)
+	{
+		i++;
+		L = L->next;
+	}
+	printf("***%d***\n", L->data);
+}
+
+int		get_elem(t_list *L, int pos)
+{
+	int	i;
+
+	i = 0;
+	if (pos > list_len(L)-1)
+	{
+		printf("print_elem : position given higher than length of list...\n");
+		exit (0);
+	}
+	while (i<pos)
+	{
+		i++;
+		L = L->next;
+	}
+
+	return (L->data);
 }
 
 void	print_list(t_list *L)

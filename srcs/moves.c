@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:08:29 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/11 15:30:03 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/15 13:59:34 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ void	reverse_rotate(t_list **list)
 
 	if (!list)
 		exit (0);
-	temp = 
+	temp = get_elem(*list, list_len(*list)-1);
+	*list = free_at(*list, list_len(*list)-1);
+	*list = add_at(*list, temp, 0);
 }
