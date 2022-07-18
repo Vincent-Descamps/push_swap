@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/15 13:31:32 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/18 15:51:09 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ void	push(t_list	**list_a, t_list	**list_b);
 void	rotate(t_list	**list);
 void	reverse_rotate(t_list **list);
 char	**ft_split(char const *s, char c);
+int		check_algo(t_list **list);
+void		small_algo(t_list **list);
 
 #endif
