@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_algo.c                                       :+:      :+:    :+:   */
+/*   med_algo.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 11:08:56 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/19 11:10:59 by vdescamp         ###   ########.fr       */
+/*   Created: 2022/07/19 10:24:40 by vdescamp          #+#    #+#             */
+/*   Updated: 2022/07/19 12:17:46 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	check_algo(t_list **list_a, t_list **list_b)
+void	med_algo(t_list **list_a, t_list **list_b)
 {
-	if (list_len(*list_a) == 2 && (*list_a)->data > (*list_a)->next->data)
-		swap(list_a); printf("sa");
-	if (list_len(*list_a) == 3)
-		small_algo(list_a);
-	if (list_len(*list_a) == 5)
-		med_algo(list_a, list_b);
-	return (0);
+	push(list_a, list_b);
+	push(list_a, list_b);
+	check_algo(list_a, list_b);
+	push(list_b, list_a);
+	check_algo(list_a, list_b);
 }

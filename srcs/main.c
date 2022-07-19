@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/18 11:34:52 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:59:06 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 	push(&list_a, &list_b);
 	rotate(&list_a);
 	reverse_rotate(&list_b);*/
-	check_algo(&list_a);
+	check_algo(&list_a, &list_b);
 	printf("list_a:\n");
 	print_list(list_a);
 	printf("list_b:\n");
