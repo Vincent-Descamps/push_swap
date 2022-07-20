@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/15 13:35:16 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/20 10:56:53 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ void	print_elem(t_list *L, int pos)
 		printf("print_elem : position given higher than length of list...\n");
 		exit (0);
 	}
-	while (i<pos)
+	while (i < pos)
 	{
 		i++;
 		L = L->next;
@@ -139,17 +139,16 @@ int		get_elem(t_list *L, int pos)
 	int	i;
 
 	i = 0;
-	if (pos > list_len(L)-1)
+	if (pos > list_len(L))
 	{
 		printf("print_elem : position given higher than length of list...\n");
 		exit (0);
 	}
-	while (i<pos)
+	while (i < pos)
 	{
 		i++;
 		L = L->next;
 	}
-
 	return (L->data);
 }
 
