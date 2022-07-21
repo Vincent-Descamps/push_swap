@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/15 14:01:17 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:59:06 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ int	main(int argc, char **argv)
 		list_a = parse_list_str(argv[1], list_a);
 	if (argc > 2)
 		list_a = parse_list_int(argv, list_a);
-	printf("--->%d\n", list_len(list_a));
+	/*printf("--->%d\n", list_len(list_a));
 	push(&list_a, &list_b);
 	swap(&list_a);
 	push(&list_a, &list_b);
 	rotate(&list_a);
-	reverse_rotate(&list_b);
+	reverse_rotate(&list_b);*/
+	check_algo(&list_a, &list_b);
 	printf("list_a:\n");
 	print_list(list_a);
 	printf("list_b:\n");
