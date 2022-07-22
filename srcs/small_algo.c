@@ -6,46 +6,46 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 11:37:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 13:45:38 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/22 14:30:47 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-void	small_algo(t_list **list)
+void	small_algo(t_list **list_a, t_list **list_b)
 {
-	if ((*list)->next->data < (*list)->data
-		&& (*list)->data < (*list)->next->next->data)
-		execute(list, 0, "sa");
-	if ((*list)->next->next->data < (*list)->next->data
-		&& (*list)->next->data < (*list)->data)
+	if ((*list_a)->next->data < (*list_a)->data
+		&& (*list_a)->data < (*list_a)->next->next->data)
+		execute(list_a, list_b, 1, "sa");
+	if ((*list_a)->next->next->data < (*list_a)->next->data
+		&& (*list_a)->next->data < (*list_a)->data)
 	{
-		rotate(list);
-		swap(list);
+		execute(list_a, list_b, 1, "ra");
+		execute(list_a, list_b, 1, "sa");
 	}
-	if ((*list)->next->data < (*list)->next->next->data
-		&& (*list)->next->next->data < (*list)->data)
-		rotate(list);
-	if ((*list)->data < (*list)->next->next->data
-		&& (*list)->next->next->data < (*list)->next->data)
+	if ((*list_a)->next->data < (*list_a)->next->next->data
+		&& (*list_a)->next->next->data < (*list_a)->data)
+		execute(list_a, list_b, 1, "ra");
+	if ((*list_a)->data < (*list_a)->next->next->data
+		&& (*list_a)->next->next->data < (*list_a)->next->data)
 	{
-		swap(list);
-		rotate(list);
+		execute(list_a, list_b, 1, "sa");
+		execute(list_a, list_b, 1, "ra");
 	}
-	if ((*list)->next->next->data < (*list)->data
-		&& (*list)->data < (*list)->next->data)
-		reverse_rotate(list);
+	if ((*list_a)->next->next->data < (*list_a)->data
+		&& (*list_a)->data < (*list_a)->next->data)
+		execute(list_a, list_b, 1, "rra");
 }
 
-/*void	algo_four(t_list **list)
+/*void	algo_four(t_list_a **list_a)
 {
 	int	temp;
 	int a, b, c, d;
 
-	a = (*list)->data;
-	b = (*list)->next->data;
-	c = (*list)->next->next->data;
-	d = (*list)->next->next->next->data;
+	a = (*list_a)->data;
+	b = (*list_a)->next->data;
+	c = (*list_a)->next->next->data;
+	d = (*list_a)->next->next->next->data;
 	while (!(a < b && b < c && c < d))
 	{
 		if (a > b)

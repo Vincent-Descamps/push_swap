@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/19 10:58:10 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/22 14:29:07 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	print_elem(t_list *L, int pos);
 int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
 char	*ft_error(void);
+int		ft_strcmp(const char *s1, const char *s2);
 /*********AvAilAble MOVES************/
 void	swap(t_list	**list_a);
 void	push(t_list	**list_a, t_list	**list_b);
@@ -53,7 +54,8 @@ void	rotate(t_list	**list);
 void	reverse_rotate(t_list **list);
 /***********AlgOriThMs****************/
 int		check_algo(t_list **list_a, t_list **list_b);
-void	small_algo(t_list **list);
+void	execute(t_list **list_a, t_list **list_b, int check, char *str);
+void	small_algo(t_list **list_a, t_list **list_b);
 void	med_algo(t_list **list_a, t_list **list_b);
 
 #endif

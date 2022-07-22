@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:08:29 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 13:44:38 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/22 14:27:28 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,14 @@ void	reverse_rotate(t_list **list)
 	*list = add_at(*list, temp, 0);
 }
 
-void	execute(t_list **list,int check, char *str)
+void	execute(t_list **list_a, t_list **list_b, int check, char *str)
 {
-	printf("****%s****", str);
-	if (check == 1 && str == "sa")
-		swap(list);
-	else
-		printf("error\n");
+	if (check == 1)
+		printf("%s\n", str);
+	if (ft_strcmp(str, "sa") == 0)
+		swap(list_a);
+	if (ft_strcmp(str, "ra") == 0)
+		rotate(list_a);
+	if (ft_strcmp(str, "rra") == 0)
+		rotate(list_a);
 }
