@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 11:37:43 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/19 12:14:28 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/22 13:45:38 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	small_algo(t_list **list)
 {
 	if ((*list)->next->data < (*list)->data
 		&& (*list)->data < (*list)->next->next->data)
-		swap(list);
+		execute(list, 0, "sa");
 	if ((*list)->next->next->data < (*list)->next->data
 		&& (*list)->next->data < (*list)->data)
 	{
