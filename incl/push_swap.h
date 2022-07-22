@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 14:29:07 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/22 15:30:26 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	reverse_rotate(t_list **list);
 /***********AlgOriThMs****************/
 int		check_algo(t_list **list_a, t_list **list_b);
 void	execute(t_list **list_a, t_list **list_b, int check, char *str);
+void	execute_dbl(t_list **list_a, t_list **list_b, int check, char *str);
 void	small_algo(t_list **list_a, t_list **list_b);
 void	med_algo(t_list **list_a, t_list **list_b);
 
