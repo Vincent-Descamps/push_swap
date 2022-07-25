@@ -6,42 +6,45 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 15:40:13 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/25 12:07:25 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-void	check_elem(t_list **list_a, t_list **list_b)
-{
-	int	temp;
-	int	i;
-
-	if ((*list_a)->data > (*list_a)->next->data)
+int	check_elem(t_list **list_a)
+{	if (list_len(*list_a) == 5)
 	{
-		i = 1;
-		temp = (*list_a)->data;
-		while (temp > get_elem(*list_a, i) || i == list_len(*list_a))
-		{
-			i++;
-			if (i == list_len(*list_a))
-				break ;
-		}
-		*list_a = free_at(*list_a, 0);
-		*list_a = add_at(*list_a, temp, i - 1);
+		if (((*list_a)->data > (*list_a)->next->next->data) ||
+			((*list_a)->data > (*list_a)	->next->next->next->data) ||
+			((*list_a)->data > (*list_a)	->next->next->next->next->data))
+			return (1);
 	}
+	if (list_len(*list_a) == 4)
+	{
+		if (((*list_a)->data > (*list_a)->next->data) ||
+			((*list_a)->data > (*list_a)->next->next->data) ||
+			((*list_a)->data > (*list_a)->next->next->next->data))
+			return (1);
+	}
+	return (0);
 }
 
 void	med_algo(t_list **list_a, t_list **list_b)
 {
-	execute(list_a, list_b, 1, "pb");
+	while (!(*list_b))
+	{
+		if (check_elem(list_a))
+			execute(list_a, list_a, 1, "ra");
+		else
+			execute(list_a, list_b, 1, "pb");
+	}
+	while (check_elem(list_a))
+			execute(list_a, list_a, 1, "ra");
 	execute(list_a, list_b, 1, "pb");
 	check_algo(list_a, list_b);
-	/*execute(list_a, list_b, 1, "sa");
-	execute(list_a, list_b, 1, "ra");
+	if ((*list_b)->data < (*list_b)->next->data)
+		execute(list_a, list_b, 1, "sb");
 	execute(list_a, list_b, 1, "pa");
-	//check_elem(list_a, list_b);
-	execute(list_a, list_b, 1, "ra");
 	execute(list_a, list_b, 1, "pa");
-	check_elem(list_a, list_b);*/
 }
