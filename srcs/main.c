@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 10:01:22 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/27 15:05:34 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ int	main(int argc, char **argv)
 	print_list(list_a);
 	printf("list_b:\n");
 	print_list(list_b);
+	free_list(list_a);
+	free_list(list_b);
 	return (0);
 }
