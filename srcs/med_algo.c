@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 15:40:13 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/07/22 15:53:57 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,9 @@ void	med_algo(t_list **list_a, t_list **list_b)
 	execute(list_a, list_b, 1, "pb");
 	execute(list_a, list_b, 1, "pb");
 	check_algo(list_a, list_b);
-	/*execute(list_a, list_b, 1, "sa");
-	execute(list_a, list_b, 1, "ra");
 	execute(list_a, list_b, 1, "pa");
 	//check_elem(list_a, list_b);
 	execute(list_a, list_b, 1, "ra");
 	execute(list_a, list_b, 1, "pa");
-	check_elem(list_a, list_b);*/
+	check_elem(list_a, list_b);
 }
