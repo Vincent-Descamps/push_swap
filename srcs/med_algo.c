@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/01 15:29:22 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/01 15:33:19 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ int	check_elem(t_list **list_a)
 {
 	if (list_len(*list_a) == 5)
 	{
-		if (((*list_a)->data > (*list_a)->next->next->data) ||
-			((*list_a)->data > (*list_a)	->next->next->next->data) ||
-			((*list_a)->data > (*list_a)	->next->next->next->next->data))
+		if (((*list_a)->data > (*list_a)->next->next->data)
+			|| ((*list_a)->data > (*list_a)->next->next->next->data)
+			|| ((*list_a)->data > (*list_a)->next->next->next->next->data))
 			return (1);
 	}
 	if (list_len(*list_a) == 4)
 	{
-		if (((*list_a)->data > (*list_a)->next->data) ||
-			((*list_a)->data > (*list_a)->next->next->data) ||
-			((*list_a)->data > (*list_a)->next->next->next->data))
+		if (((*list_a)->data > (*list_a)->next->data)
+			|| ((*list_a)->data > (*list_a)->next->next->data)
+			|| ((*list_a)->data > (*list_a)->next->next->next->data))
 			return (1);
 	}
 	return (0);

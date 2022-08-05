@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_algo.c                                       :+:      :+:    :+:   */
+/*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 11:08:56 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/05 11:08:31 by vdescamp         ###   ########.fr       */
+/*   Created: 2022/08/01 16:42:18 by vdescamp          #+#    #+#             */
+/*   Updated: 2022/08/05 10:55:13 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	check_algo(t_list **list_a, t_list **list_b)
+void	index_list(t_list	*list_a)
 {
-	if (list_len(*list_a) == 2 && (*list_a)->data > (*list_a)->next->data)
-		execute(list_a, list_b, 1, "sa");
-	if (list_len(*list_a) == 3)
-		small_algo(list_a, list_b);
-	if (list_len(*list_a) == 5)
-		med_algo(list_a, list_b);
-	if (list_len(*list_a) > 5)
-		big_algo(list_a, list_b);
-	return (0);
+	t_list	*ptr;
+	t_list	*decrease;
+	int		min;
+	int		len;
+
+	len = list_len(list_a);
+	while (--len > 0)
+	{
+		ptr = list_a;
+		min = INT_MIN;
+		while (ptr)
+		{
+			if (ptr->data > min && ptr->index == 0)
+			{
+				min = ptr->data;
+				decrease = ptr;
+				ptr = list_a;
+			}
+			else
+				ptr = ptr->next;
+		}
+		if (decrease != NULL)
+			decrease->index = len;
+	}
 }

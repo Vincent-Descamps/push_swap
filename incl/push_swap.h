@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 15:30:26 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/05 11:16:15 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct s_list
 {
 	int				data;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 
@@ -42,6 +44,8 @@ int		list_len(t_list *L);
 int		get_elem(t_list *L, int pos);
 void	print_list(t_list *L);
 void	print_elem(t_list *L, int pos);
+void	index_list(t_list *list_a);
+int		check_elem(t_list **list_a);
 /****************LIBFT***************/
 int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
@@ -58,5 +62,6 @@ void	execute(t_list **list_a, t_list **list_b, int check, char *str);
 void	execute_dbl(t_list **list_a, t_list **list_b, int check, char *str);
 void	small_algo(t_list **list_a, t_list **list_b);
 void	med_algo(t_list **list_a, t_list **list_b);
+void	big_algo(t_list **list_a, t_list **list_b);
 
 #endif
