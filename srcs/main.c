@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/10 15:52:43 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/10 16:08:04 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 		list_a = parse_list_str(argv[1], list_a);
 	if (argc > 2)
 		list_a = parse_list_int(argv, list_a);
-	index_list(list_a);
+	//index_list(list_a);
 	check_algo(&list_a, &list_b);
 	printf("list_a:\n");
 	print_list(list_a);
