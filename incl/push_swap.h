@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/05 11:16:15 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/10 13:37:27 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ t_list	*create_cell(int data);
 int		is_empty_list(t_list *L);
 int		list_len(t_list *L);
 int		get_elem(t_list *L, int pos);
+int		get_pos(t_list *L, int data);
+int		get_pos_index(t_list *L, int index);
 void	print_list(t_list *L);
 void	print_elem(t_list *L, int pos);
 void	index_list(t_list *list_a);

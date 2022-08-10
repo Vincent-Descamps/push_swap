@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:42:18 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/05 10:55:13 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/10 14:21:24 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	index_list(t_list	*list_a)
 			else
 				ptr = ptr->next;
 		}
-		if (decrease != NULL)
+		if (!is_empty_list(decrease))
 			decrease->index = len;
 	}
 }

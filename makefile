@@ -6,13 +6,15 @@
 #    By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/25 12:17:47 by vdescamp          #+#    #+#              #
-#    Updated: 2022/07/25 12:21:52 by vdescamp         ###   ########.fr        #
+#    Updated: 2022/08/10 14:38:01 by vdescamp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = srcs/check_algo.c \
+SRCS =	srcs/big_algo.c \
+		srcs/check_algo.c \
 		srcs/execute.c \
 		srcs/ft_split.c \
+		srcs/index.c \
 		srcs/main.c \
 		srcs/med_algo.c \
 		srcs/moves.c \
@@ -27,7 +29,7 @@ NAME = push_swap
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -g #-fsanitize=address
 
 RM = rm -f
 

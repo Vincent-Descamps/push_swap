@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/27 12:57:09 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/10 13:36:52 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,32 @@ int		get_elem(t_list *L, int pos)
 		L = L->next;
 	}
 	return (L->data);
+}
+
+int	get_pos(t_list *L, int data)
+{
+	int	i;
+
+	i = 1;
+	while (data != L->data)
+	{
+		i++;
+		L = L->next;
+	}
+	return (i);
+}
+
+int	get_pos_index(t_list *L, int index)
+{
+	int	i;
+
+	i = 0;
+	while (index != L->index)
+	{
+		i++;
+		L = L->next;
+	}
+	return (i);
 }
 
 void	print_list(t_list *L)
