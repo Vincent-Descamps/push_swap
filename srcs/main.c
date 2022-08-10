@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/10 14:04:30 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/10 15:35:50 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,11 @@ int	main(int argc, char **argv)
 	print_list(list_a);
 	printf("list_b:\n");
 	print_list(list_b);
-	free_list(list_a);
-	free_list(list_b);
+	free_list2(&list_a);
+	free_list2(&list_b);
+	if (is_empty_list(list_a))
+		printf("all good_a\n");
+	if (is_empty_list(list_b))
+		printf("all good_b\n");
 	return (0);
 }
