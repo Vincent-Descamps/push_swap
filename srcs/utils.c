@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/10 15:33:58 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/17 09:22:18 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,7 +184,7 @@ int	get_pos_index(t_list *L, int index)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (index != L->index)
 	{
 		i++;

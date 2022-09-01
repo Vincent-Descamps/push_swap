@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 17:23:49 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 13:58:37 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/08/10 16:31:41 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			sign = -1;
+			sign *= -1;
 		i++;
 	}
 	while ('0' <= str[i] && str[i] <= '9')
@@ -35,8 +35,7 @@ int	ft_atoi(const char *str)
 		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}
-	nb *= sign;
-	return (nb);
+	return (nb *= sign);
 }
 
 int	ft_strcmp(const char *s1, const char *s2)
