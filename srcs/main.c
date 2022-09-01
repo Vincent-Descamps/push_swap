@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 14:42:25 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/01 16:53:53 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,9 @@ char	*ft_error(void)
 
 int	main(int argc, char **argv)
 {
-	t_list	**list_a;
+	t_list	*list_a;
 	t_list	*list_b;
-	t_list	*a;
 
-	a = *list_a;
 	list_a = empty_list();
 	list_b = empty_list();
 	if (argc == 1)
@@ -33,7 +31,8 @@ int	main(int argc, char **argv)
 		list_a = parse_list_str(argv[1], list_a);
 	if (argc > 2)
 		list_a = parse_list_int(argv, list_a);
-	check_algo(list_a, &list_b);
+	//check_algo(&list_a, &list_b);
+	execute(&list_a, &list_b, 1, "ra");
 	printf("list_a:\n");
 	print_list(list_a);
 	printf("list_b:\n");

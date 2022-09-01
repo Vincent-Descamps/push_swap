@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 12:24:48 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/01 16:37:37 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_list	*free_at(t_list *L, int pos);
 t_list	*free_list(t_list *L);
 void	free_list2(t_list **list);
 t_list	*create_cell(int data);
+t_list	*get_last_elem(t_list *L);
 int		is_empty_list(t_list *L);
 int		list_len(t_list *L);
 int		get_elem(t_list *L, int pos);

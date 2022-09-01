@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 14:39:15 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/01 16:39:21 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,13 @@ t_list	*free_list(t_list *L)
 		free(L);
 		L = tmp;
 	}
+	return (L);
+}
+
+t_list *get_last_elem(t_list *L)
+{
+	while (L && L->next != NULL)
+		L = L->next;
 	return (L);
 }
 
