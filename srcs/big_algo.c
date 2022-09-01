@@ -6,24 +6,24 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/29 12:19:43 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/01 13:38:35 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
-
+/*
 void	big_algo(t_list **list_a, t_list **list_b)
 {
 	int		med;
 	int		index;
 	int		len;
-	int 	tmp;
+	int		tmp;
 
 	len = list_len(*list_a) - 1;
 	tmp = len;
 	med = (list_len(*list_a) / 2);
 	index_list(*list_a);
-	index = 0;/* 
+	index = 0;
 	while (index <= len)
 	{
 		if ((*list_a)->index < med)
@@ -64,7 +64,7 @@ void	big_algo(t_list **list_a, t_list **list_b)
 		}
 		index++;
 	}
-*/
+***************First algo... to long...*****************
 	while (index <= len)
 	{
 		if (get_pos_index(*list_a, index) < med)
@@ -83,4 +83,18 @@ void	big_algo(t_list **list_a, t_list **list_b)
 	}
 	while (!is_empty_list(*list_b))
 		execute(list_a, list_b, 1, "pa");
+}
+*/
+void	big_algo(t_list **list_a, t_list **list_b)
+{
+	int		index;
+	int		len;
+
+	len = list_len(*list_a);
+	index = 0;
+	index_list(*list_a);
+	while (--len > 2)
+	{
+		execute(list_a, list_b, 1, "pb");
+	}
 }

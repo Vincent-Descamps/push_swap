@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:08:29 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/27 15:05:20 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/01 14:59:43 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,20 @@ void	swap(t_list **list)
 
 void	push(t_list **list_a, t_list **list_b)
 {
+/*
+	t_list	**list_a;
+	t_list	*a;
+	t_list	**list_b;
+	t_list	*b;
+
+	a = *list_a;
+
+	*list_b = a;
+
+	*list_a = a->next;;
+	b = *list_b;
+	b->next = NULL;
+*/
 	if (!list_a)
 		exit (0);
 	*list_b = add_at(*list_b, (*list_a)->data, 0);

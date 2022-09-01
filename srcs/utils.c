@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/08/17 09:22:18 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/01 14:39:15 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,7 +199,7 @@ void	print_list(t_list *L)
 		printf("NULL\n");
 	while (L)
 	{
-		printf("%d\n", L->data);
+		printf("data : %d -- index : %d\n", L->data, L->index);
 		L = L->next;
 	}
 }
