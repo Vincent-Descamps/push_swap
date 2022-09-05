@@ -6,12 +6,12 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 13:38:35 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/05 11:39:37 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
-/*
+
 void	big_algo(t_list **list_a, t_list **list_b)
 {
 	int		med;
@@ -64,6 +64,8 @@ void	big_algo(t_list **list_a, t_list **list_b)
 		}
 		index++;
 	}
+}
+/*
 ***************First algo... to long...*****************
 	while (index <= len)
 	{
@@ -84,7 +86,7 @@ void	big_algo(t_list **list_a, t_list **list_b)
 	while (!is_empty_list(*list_b))
 		execute(list_a, list_b, 1, "pa");
 }
-*/
+
 void	big_algo(t_list **list_a, t_list **list_b)
 {
 	int		index;
@@ -98,3 +100,4 @@ void	big_algo(t_list **list_a, t_list **list_b)
 		execute(list_a, list_b, 1, "pb");
 	}
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:57:02 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 16:39:21 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/05 10:36:44 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*create_cell(int data)
 	if (!cell)
 		return (NULL);
 	cell->data = data;
+	cell->index = 0;
 	cell->next = NULL;
 	return (cell);
 }
@@ -119,6 +120,13 @@ t_list	*free_list(t_list *L)
 t_list *get_last_elem(t_list *L)
 {
 	while (L && L->next != NULL)
+		L = L->next;
+	return (L);
+}
+
+t_list *elem_before_last(t_list *L)
+{
+	while (L->next && L->next->next != NULL)
 		L = L->next;
 	return (L);
 }

@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:08:29 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 16:50:04 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/05 11:46:42 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,11 @@ void	swap(t_list **list)
 void	push(t_list **list_a, t_list **list_b)
 {
 	t_list	*a;
-	t_list	*b;
 
-	a = *list_a;
-	*list_b = a;
-	*list_a = a->next;
-	b = *list_b;
-	b->next = NULL;
-/*
-	if (!list_a)
-		exit (0);
-	*list_b = add_at(*list_b, (*list_a)->data, 0);
-	*list_a = free_at(*list_a, 0);*/
+	a = (*list_a)->next;
+	(*list_a)->next = *list_b;
+	*list_b = *list_a;
+	*list_a = a;
 }
 
 void	rotate(t_list **list)
@@ -51,22 +44,18 @@ void	rotate(t_list **list)
 	last = get_last_elem(*list);
 	a->next = NULL;
 	last->next = a;
-	/*
-	*list = free_at(*list, 0);
-	*list = add_at(*list, temp, list_len(*list));
-	*/
 }
 
 void	reverse_rotate(t_list **list)
 {
 	t_list	*a;
-	t_list	*tmp;
+	t_list	*last;
+	t_list	*bfl;
 
+	last = get_last_elem(*list);
+	bfl = elem_before_last(*list);
 	a = *list;
-	tmp = get_last_elem(*list);
-	a->next = a;
-/*
-	temp = get_elem(*list, list_len(*list) - 1);
-	*list = free_at(*list, list_len(*list) - 1);
-	*list = add_at(*list, temp, 0);*/
+	*list = last;
+	(*list)->next = a;
+	bfl->next = NULL;
 }

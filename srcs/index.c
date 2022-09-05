@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:42:18 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 12:36:13 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/05 10:38:20 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,29 @@
 
 void	index_list(t_list	*list_a)
 {
-	t_list	*ptr;
-	t_list	*decrease;
+	t_list	*a;
+	t_list	*tmp;
 	int		min;
 	int		len;
 
 	len = list_len(list_a);
-	printf("%d\n", len);
 	while (--len > 0)
 	{
-		ptr = list_a;
+		a = list_a;
 		min = INT_MIN;
-		while (ptr)
+		while (a)
 		{
-			if (ptr->data > min && ptr->index == 0)
+			if (a->data > min && a->index == 0)
 			{
-				min = ptr->data;
-				decrease = ptr;
-				ptr = list_a;
+				min = a->data;
+				tmp = a;
+				a = list_a;
 			}
 			else
-				ptr = ptr->next;
+				a = a->next;
 		}
-		if (!is_empty_list(decrease))
-			decrease->index = len;
+		if (!is_empty_list(tmp))
+			tmp->index = len;
 	}
 }
 /*
