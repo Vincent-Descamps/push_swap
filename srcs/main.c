@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/05 11:53:20 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/08 12:06:46 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ int	main(int argc, char **argv)
 	check_algo(&list_a, &list_b);
 	//execute(&list_a, &list_b, 1, "sa");
 	//execute(&list_a, &list_b, 1, "sa");
-	printf("list_a:\n");
+	/*printf("list_a:\n");
 	print_list(list_a);
 	printf("list_b:\n");
-	print_list(list_b);
+	print_list(list_b);*/
 	free_list2(&list_a);
 	free_list2(&list_b);
-	if (is_empty_list(list_a))
+	/*if (is_empty_list(list_a))
 		printf("all good_a\n");
 	if (is_empty_list(list_b))
-		printf("all good_b\n");
+		printf("all good_b\n");*/
 	return (0);
 }

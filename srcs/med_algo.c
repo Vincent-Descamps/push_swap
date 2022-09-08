@@ -6,12 +6,12 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/05 13:08:46 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/08 09:27:45 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
-/*
+
 int	check_elem(t_list **list_a)
 {
 	if (list_len(*list_a) == 5)
@@ -48,7 +48,8 @@ void	med_algo(t_list **list_a, t_list **list_b)
 		execute(list_a, list_b, 1, "sb");
 	execute(list_a, list_b, 1, "pa");
 	execute(list_a, list_b, 1, "pa");
-}*/
+}
+/*
 static void	final_push(t_list **list_a, t_list **list_b)
 {
 	t_list	*a;
@@ -85,3 +86,4 @@ void	med_algo(t_list **list_a, t_list **list_b)
 	small_algo(list_a, list_b);
 	final_push(list_a, list_b);
 }
+*/
