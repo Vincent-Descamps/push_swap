@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/08 12:07:17 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:59:48 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,20 @@ void	big_algo(t_list **list_a, t_list **list_b)
 	int		len;
 	int		last_index;
 	int		index;
+	t_list	*tmp;
 
 	len = list_len(*list_a);
 	med = len / 2;
 	last_index = len - 1;
-	index = 0;
+	index = len / 5;
 	//printf("len : %d\n", len);
 	//printf("med : %d\n", med);
 	index_list(*list_a);
-	/*tant que listA ne contient plus qu'un element
-		tant que l'index de l'element de ma listA n'est pas < a l'index de mon premier chunk
-			je trouve si sa pos est < ou > a mon med
-				en fonction "ra" si inf, "rra" si sup*/
+	tmp = *list_b;
+	/*
 	while ((*list_a)->next != NULL)
 	{
-		while ((*list_a)->index != index)
+		while (!((*list_a)->index <= index))
 		{
 			if (get_pos_index(*list_a, index) < med)
 				execute(list_a, list_b, 1, "ra");
@@ -44,6 +43,23 @@ void	big_algo(t_list **list_a, t_list **list_b)
 	}
 	while (!(is_empty_list(*list_b)))
 		execute(list_a, list_b, 1, "pa");
+	*/
+	while (len > 3)
+	{
+		while (len > med)
+		{
+			if ((*list_a)->index >= med - 1)
+			{
+				execute(list_a, list_b, 1, "pb");
+				len--;
+			}
+			if (((*list_a)->index < med))
+				execute(list_a, list_b, 1, "ra");
+		}
+		execute(list_a, list_b, 1, "pb");
+		len--;
+	}
+	small_algo(list_a, list_b);
 }
 
 /*
