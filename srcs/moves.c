@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 19:08:29 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/05 11:46:42 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/13 10:59:31 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ void	swap(t_list **list)
 		temp = (*list)->data;
 		(*list)->data = (*list)->next->data;
 		(*list)->next->data = temp;
+		temp = (*list)->index;
+		(*list)->index = (*list)->next->index;
+		(*list)->next->index = temp;
 	}
 }
 
