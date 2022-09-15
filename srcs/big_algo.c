@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/14 16:08:07 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/15 15:45:56 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,33 @@ void	chunk(t_list **list_a, t_list **list_b, int last_index, int med, int len, i
 {
 	int	chunk;
 	int	frac;
+	int chunk_size;
+	int	index;
 
-	frac = len / 5;
-	frac = x * frac;
-	chunk = len - (frac);
-	while ((list_len(*list_b) < frac - 2))
+	frac = x * (len / 5);
+	chunk_size = frac;
+	chunk = len - frac;
+	index = chunk;
+	printf("frac : %d----chunk : %d\n", frac, chunk);
+	while ((list_len(*list_b) < frac))
+	{
+		while ((*list_a)->index != index && index < chunk + chunk_size)
+		{
+			if (get_pos_index(*list_a, index) <= med)
+				execute(list_a, list_b, 1, "ra");
+			if (get_pos_index(*list_a, index) > med)
+				execute(list_a, list_b, 1, "rra");
+		}
+		execute(list_a, list_b, 1, "pb");
+		index++;
+	}
+	//**********First Algo**************
+	/*while ((list_len(*list_b) < frac - 2))
 	{
 		while ((*list_a)->index >= chunk && (*list_a)->index != last_index && (*list_a)->index != med)
 			execute(list_a, list_b, 1, "pb");
 		execute(list_a, list_b, 1, "ra");
-	}
+	}*/
 }
 
 void	finish(t_list **list_a, t_list **list_b)
@@ -70,7 +87,11 @@ void	big_algo(t_list **list_a, t_list **list_b)
 	last_index = len - 1;
 	x = 1;
 	index_list(*list_a);
-	while (list_len(*list_a) > 3)
+	chunk(list_a, list_b, last_index, med, len, x);
+	chunk(list_a, list_b, last_index, med, len, x + 1);
+	chunk(list_a, list_b, last_index, med, len, x + 2);
+	chunk(list_a, list_b, last_index, med, len, x + 3);
+	/*while (list_len(*list_a) > 3)
 	{
 		while (x < 5)
 		{
@@ -81,8 +102,8 @@ void	big_algo(t_list **list_a, t_list **list_b)
 			execute(list_a, list_b, 1, "ra");
 		else
 			execute(list_a, list_b, 1, "pb");
-	}
-	small_algo(list_a, list_b);
-	part_2(list_a, list_b);
-	finish(list_a, list_b);
+	}*/
+	//small_algo(list_a, list_b);
+	//part_2(list_a, list_b);
+	//finish(list_a, list_b);
 }
