@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:42:18 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/05 10:38:20 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/14 16:19:09 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,3 @@ void	index_list(t_list	*list_a)
 			tmp->index = len;
 	}
 }
-/*
-void	index_list(t_list	*list_a)
-{
-	int	min;
-	int	len;
-
-	min = INT_MIN;
-	len = list_len(list_a);
-	print_list(list_a);
-	while (len > 0)
-	{
-
-	}
-}*/

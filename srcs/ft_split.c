@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 17:52:05 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/04 08:53:46 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/14 16:19:23 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,23 +93,3 @@ char	**ft_split(char const *s, char c)
 	find_str(s, c, main_str, str_num);
 	return (main_str);
 }
-/*
-int	main(void)
-{
-	char				*s;
-	char				c;
-	char				**tab;
-	unsigned int		i;
-
-	s = "aa bbb aaa  bb  a ";
-	c = ' ';
-	i = 0;
-	tab = ft_split(s, c);
-	while (tab[i] != 0)
-	{
-		ft_putendl_fd(tab[i], 1);
-		i++;
-	}
-	return (0);
-}
-*/

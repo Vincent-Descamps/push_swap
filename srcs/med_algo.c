@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/13 11:00:18 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/14 16:18:27 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,41 +49,3 @@ void	med_algo(t_list **list_a, t_list **list_b)
 	execute(list_a, list_b, 1, "pa");
 	execute(list_a, list_b, 1, "pa");
 }
-/*
-static void	final_push(t_list **list_a, t_list **list_b)
-{
-	t_list	*a;
-	t_list	*b;
-
-	a = *list_a;
-	b = *list_b;
-	if (b->index == 4)
-	{
-		execute(list_a, list_b, 1, "pa");
-		execute(list_a, list_b, 1, "ra");
-	}
-	else if (b->index == 0)
-		execute(list_a, list_b, 1, "pa");
-	else if (b->index == 1)
-	{
-		while (a->index != 2)
-			execute(list_a, list_b, 1, "ra");
-		execute(list_a, list_b, 1, "pa");
-	}
-	else if (b->index == 3)
-	{
-		while (a->index != 4)
-			execute(list_a, list_b, 1, "ra");
-		execute(list_a, list_b, 1, "pa");
-	}
-}
-
-void	med_algo(t_list **list_a, t_list **list_b)
-{
-	index_list(*list_a);
-	execute(list_a, list_b, 1, "pb");
-	execute(list_a, list_b, 1, "pb");
-	small_algo(list_a, list_b);
-	final_push(list_a, list_b);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:33:50 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/01 14:45:02 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/14 16:15:30 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,5 @@ t_list	*parse_list_str(char *str, t_list *list_a)
 		list_a = add_at(list_a, data, j);
 		j++;
 	}
-	print_list(list_a);
-	printf("****************\n");
 	return (list_a);
 }
