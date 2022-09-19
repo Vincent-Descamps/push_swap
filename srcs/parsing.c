@@ -6,18 +6,38 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:33:50 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/14 16:15:30 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/19 13:39:30 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
+/*
+void	check_dbl(char **argv)
+{
+	int	i;
+	int	j;
 
+	i = 1;
+	while (argv[i])
+	{
+		j = i + 1;
+		while (argv[j])
+		{
+			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
+				ft_error();
+			j++;
+		}
+		i++;
+	}
+}
+*/
 t_list	*parse_list_int(char **argv, t_list	*list_a)
 {
 	int		i;
 	int		j;
 	int		data;
 
+	//check_dbl(argv);
 	list_a = empty_list();
 	i = -1;
 	j = 0;
