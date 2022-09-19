@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/05 10:34:41 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/19 09:31:54 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ void	execute_dbl(t_list **list_a, t_list **list_b, int check, char *str);
 void	small_algo(t_list **list_a, t_list **list_b);
 void	med_algo(t_list **list_a, t_list **list_b);
 void	big_algo(t_list **list_a, t_list **list_b);
+void	huge_algo(t_list **list_a, t_list **list_b);
 
 #endif
