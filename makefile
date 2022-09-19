@@ -6,7 +6,7 @@
 #    By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/25 12:17:47 by vdescamp          #+#    #+#              #
-#    Updated: 2022/08/17 11:30:16 by vdescamp         ###   ########.fr        #
+#    Updated: 2022/09/19 11:42:05 by vdescamp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,18 @@ SRCS =	srcs/big_algo.c \
 		srcs/check_algo.c \
 		srcs/execute.c \
 		srcs/ft_split.c \
+		srcs/huge_algo.c \
 		srcs/index.c \
+		srcs/libft_utils.c \
 		srcs/main.c \
 		srcs/med_algo.c \
 		srcs/moves.c \
 		srcs/parsing.c \
 		srcs/small_algo.c \
-		srcs/utils.c \
-		srcs/utils1.c \
+		srcs/utils_1_0.c \
+		srcs/utils_1_1.c \
+		srcs/utils_1_2.c \
+		srcs/utils_1_3.c
 
 OBJS = ${SRCS:.c=.o}
 
