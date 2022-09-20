@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/19 10:32:14 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/20 10:22:28 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ void	chunk(t_list **list_a, t_list **list_b, int len, int x)
 
 	med = len / 2;
 	last_index = len - 1;
-	frac = x * (len / 5);
+	if (len > 199)
+		frac = x * (len / 11);
+	else
+		frac = x * (len / 5);
 	chunk = len - frac;
 	while ((list_len(*list_b) < frac - 2))
 	{
@@ -62,7 +65,7 @@ void	part_2(t_list **list_a, t_list **list_b)
 	}
 }
 
-void	big_algo(t_list **list_a, t_list **list_b)
+void	big_algo(t_list **list_a, t_list **list_b, int i)
 {
 	int		med;
 	int		len;
@@ -76,7 +79,7 @@ void	big_algo(t_list **list_a, t_list **list_b)
 	index_list(*list_a);
 	while (list_len(*list_a) > 3)
 	{
-		while (++x < 5)
+		while (++x < i)
 			chunk(list_a, list_b, len, x);
 		if ((*list_a)->index == 0 || (*list_a)->index == last_index
 			|| (*list_a)->index == med)
