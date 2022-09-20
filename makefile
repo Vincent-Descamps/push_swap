@@ -6,15 +6,15 @@
 #    By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/25 12:17:47 by vdescamp          #+#    #+#              #
-#    Updated: 2022/09/19 11:42:05 by vdescamp         ###   ########.fr        #
+#    Updated: 2022/09/20 10:31:12 by vdescamp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	srcs/big_algo.c \
 		srcs/check_algo.c \
+		srcs/check_dbl \
 		srcs/execute.c \
 		srcs/ft_split.c \
-		srcs/huge_algo.c \
 		srcs/index.c \
 		srcs/libft_utils.c \
 		srcs/main.c \
