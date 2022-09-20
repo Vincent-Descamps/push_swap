@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:40:47 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/19 13:52:40 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/20 09:51:26 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 void	check_dbl(t_list **list)
 {
 	t_list	*tmp;
+	t_list	*chk;
 
-	tmp = (*list)->next;
-	while (*list)
+	chk = *list;
+	while (chk)
 	{
-		while ((!is_empty_list(tmp)))
+		tmp = chk->next;
+		while (tmp)
 		{
-			if (*list = tmp)
+			if (chk->data == tmp->data)
 				ft_error();
 			tmp = tmp->next;
 		}
+		chk = chk->next;
 	}
 }
