@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:54:18 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/19 13:37:17 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/20 10:37:05 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,10 @@ int	ft_strcmp(const char *s1, const char *s2)
 		i++;
 	}
 	return (0);
+}
+
+char	*ft_error(void)
+{
+	write(1, "Error\n", 6);
+	exit (0);
 }

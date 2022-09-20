@@ -6,17 +6,11 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/20 10:26:15 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/20 10:36:54 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
-
-char	*ft_error(void)
-{
-	write(1, "Error\n", 6);
-	exit (0);
-}
 
 int	main(int argc, char **argv)
 {
