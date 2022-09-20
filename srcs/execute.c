@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 15:31:46 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/07/22 15:38:32 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/20 10:25:47 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	execute(t_list **list_a, t_list **list_b, int check, char *str)
 	if (ft_strcmp(str, "pb") == 0)
 		push(list_a, list_b);
 }
+
+/* I did not need to use the following moves in the algo i used. */
 
 void	execute_dbl(t_list **list_a, t_list **list_b, int check, char *str)
 {

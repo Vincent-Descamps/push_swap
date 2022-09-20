@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 11:08:56 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/19 10:17:19 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/20 10:19:31 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	check_algo(t_list **list_a, t_list **list_b)
 	if (list_len(*list_a) == 5)
 		med_algo(list_a, list_b);
 	if (list_len(*list_a) > 5 && list_len(*list_a) < 200)
-		big_algo(list_a, list_b);
+		big_algo(list_a, list_b, 5);
 	if (list_len(*list_a) > 199)
-		huge_algo(list_a, list_b);
+		big_algo(list_a, list_b, 11);
 	return (0);
 }
