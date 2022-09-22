@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:28:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/20 10:24:20 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/22 12:44:23 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_stack
 t_list	*parse_list_str(char *str, t_list *list_a);
 t_list	*parse_list_int(char **argv, t_list *list_b);
 void	check_dbl(t_list **list);
+int	is_sorted(t_list **list_a, t_list **list_b);
 /**utIls To mAniPulaTe LinKEd cHaiNs**/
 t_list	*empty_list(void);
 t_list	*add_at(t_list *L, int data, int pos);

@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/22 13:07:17 by vdescamp         ###   ########.fr       */
+/*   Created: 2022/09/22 12:40:43 by vdescamp          #+#    #+#             */
+/*   Updated: 2022/09/22 12:56:38 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	main(int argc, char **argv)
+int	is_sorted(t_list **list_a, t_list **list_b)
 {
-	t_list	*list_a;
-	t_list	*list_b;
+	t_list	*a;
 
-	list_a = empty_list();
-	list_b = empty_list();
-	if (argc > 1)
+	a = *list_a;
+	if (!(is_empty_list(*list_b)))
+		return (1);
+	while (a)
 	{
-		if (argc == 2)
-			list_a = parse_list_str(argv[1], list_a);
-		if (argc > 2)
-			list_a = parse_list_int(argv, list_a);
-		if (is_sorted(&list_a, &list_b) == 0)
+		if (a->next == NULL)
 			return (0);
-		check_dbl(&list_a);
-		check_algo(&list_a, &list_b);
-		/*printf("list a:");
-		print_list(list_a);*/
-		free_list2(&list_a);
-		free_list2(&list_b);
+		if (a->data < a->next->data)
+			a = a->next;
+		else
+			return (1);
 	}
 	return (0);
 }
