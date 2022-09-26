@@ -1,53 +1,67 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/07/25 12:17:47 by vdescamp          #+#    #+#              #
-#    Updated: 2022/09/20 10:31:12 by vdescamp         ###   ########.fr        #
+#    Created: 2022/09/26 17:05:21 by vdescamp          #+#    #+#              #
+#    Updated: 2022/09/26 17:59:06 by vdescamp         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	srcs/big_algo.c \
-		srcs/check_algo.c \
-		srcs/check_dbl \
-		srcs/execute.c \
-		srcs/ft_split.c \
-		srcs/index.c \
-		srcs/libft_utils.c \
-		srcs/main.c \
-		srcs/med_algo.c \
-		srcs/moves.c \
-		srcs/parsing.c \
-		srcs/small_algo.c \
-		srcs/utils_1_0.c \
-		srcs/utils_1_1.c \
-		srcs/utils_1_2.c \
-		srcs/utils_1_3.c
+NAME    := push_swap
+CC      := gcc
+FLAGS   := -Wall -Wextra -Werror
+SRCS        :=      srcs/parsing.c \
+                          srcs/check_algo.c \
+                          srcs/utils_1_1.c \
+                          srcs/is_sorted.c \
+                          srcs/huge_algo.c \
+                          srcs/check_dbl.c \
+                          srcs/big_algo.c \
+                          srcs/execute.c \
+                          srcs/utils_1_2.c \
+                          srcs/moves.c \
+                          srcs/ft_split.c \
+                          srcs/index.c \
+                          srcs/main.c \
+                          srcs/utils_1_3.c \
+                          srcs/small_algo.c \
+                          srcs/med_algo.c \
+                          srcs/utils_1_0.c \
+                          srcs/libft_utils.c \
 
-OBJS = ${SRCS:.c=.o}
+OBJS        := $(SRCS:.c=.o)
 
-NAME = push_swap
+.c.o:
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
-CC = cc
+CLR_RMV		:= \033[0m
+RED		    := \033[1;31m
+GREEN		:= \033[1;32m
+YELLOW		:= \033[1;33m
+BLUE		:= \033[1;34m
+CYAN 		:= \033[1;36m
+RM		    := rm -f
 
-CFLAGS = -Wall -Werror -Wextra
+${NAME}:	${OBJS}
+			@echo "$(GREEN)Compilation ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
+			${CC} ${FLAGS} -o ${NAME} ${OBJS}
+			@echo "$(GREEN)$(NAME) created[0m ✔️"
 
-RM = rm -f
+all:		${NAME}
 
-all: ${NAME}
+bonus:		all
 
-${NAME}: ${OBJS}
-		$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
+clean:
+			@ ${RM} *.o */*.o */*/*.o
+			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
-clean :
-		${RM} ${OBJS}
+fclean:		clean
+			@ ${RM} ${NAME}
+			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ✔️"
 
-fclean: clean
-		${RM} ${NAME}
+re:			fclean all
 
-re :    fclean all
-
-.PHONY: all clean fclean re
+.PHONY:		all clean fclean re
