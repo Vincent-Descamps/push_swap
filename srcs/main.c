@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/22 13:07:17 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/22 19:02:28 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ int	main(int argc, char **argv)
 		check_dbl(&list_a);
 		check_algo(&list_a, &list_b);
 		/*printf("list a:");
-		print_list(list_a);*/
+		print_list(list_a);
+		printf("list b:");
+		print_list(list_b);*/
 		free_list2(&list_a);
 		free_list2(&list_b);
 	}

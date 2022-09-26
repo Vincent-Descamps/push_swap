@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 16:42:18 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/14 16:19:09 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:59:37 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	index_list(t_list	*list_a)
 	int		min;
 	int		len;
 
-	len = list_len(list_a);
+	len = list_len(list_a) + 1;
 	while (--len > 0)
 	{
 		a = list_a;
