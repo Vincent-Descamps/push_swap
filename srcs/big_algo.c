@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/22 13:09:45 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/26 09:48:00 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	chunk(t_list **list_a, t_list **list_b, int len, int x)
 	int	frac;
 
 	med = len / 2;
-	last_index = len - 1;
+	last_index = len;
 	if (len > 199)
 		frac = x * (len / 11);
 	else
@@ -37,7 +37,7 @@ void	chunk(t_list **list_a, t_list **list_b, int len, int x)
 
 void	finish(t_list **list_a, t_list **list_b)
 {
-	while ((*list_a)->index != 0)
+	while ((*list_a)->index != 1)
 		execute(list_a, list_b, 1, "ra");
 }
 
@@ -74,14 +74,14 @@ void	big_algo(t_list **list_a, t_list **list_b, int i)
 
 	len = list_len(*list_a);
 	med = (len / 2);
-	last_index = len - 1;
+	last_index = len;
 	x = 0;
 	index_list(*list_a);
 	while (list_len(*list_a) > 3)
 	{
 		while (++x < i)
 			chunk(list_a, list_b, len, x);
-		if ((*list_a)->index == 0 || (*list_a)->index == last_index
+		if ((*list_a)->index == 1 || (*list_a)->index == last_index
 			|| (*list_a)->index == med)
 			execute(list_a, list_b, 1, "ra");
 		else
