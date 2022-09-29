@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/26 16:55:38 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:17:49 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,20 @@ int	main(int argc, char **argv)
 			return (0);
 		check_dbl(&list_a);
 		check_algo(&list_a, &list_b);
-		/*printf("list a:");
-		print_list(list_a);
-		printf("list b:");
-		print_list(list_b);*/
+		/*if (is_sorted(&list_a, &list_b) == 0)
+		{
+			printf("list a:\n");
+			print_list(list_a);
+			printf("list b: ");
+			print_list(list_b);
+		}
+		else if (is_sorted(&list_a, &list_b) == 1)
+		{
+			printf("We do have a problem...\n");
+			printf("list is not sorted :\n");
+			printf("list a:\n");
+			print_list(list_a);
+		}*/
 		free_list2(&list_a);
 		free_list2(&list_b);
 	}
