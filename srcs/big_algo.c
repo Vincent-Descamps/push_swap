@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/26 16:55:08 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/26 18:16:39 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	chunk(t_list **list_a, t_list **list_b, int len, int x)
 
 	med = len / 2;
 	last_index = len;
-	if (len > 199)
+	/*if (len > 199)
 		frac = x * (len / 11);
-	else
+	else*/
 		frac = x * (len / 5);
 	chunk = len - frac;
 	while (list_len(*list_b) < frac - 2)
