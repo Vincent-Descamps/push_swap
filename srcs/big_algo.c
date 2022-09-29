@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:51:22 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/26 18:16:39 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:17:36 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,18 @@
 void	chunk(t_list **list_a, t_list **list_b, int len, int x)
 {
 	int	last_index;
-	int	med;
 	int	chunk;
 	int	frac;
 
-	med = len / 2;
 	last_index = len;
-	/*if (len > 199)
+	if (len > 250)
 		frac = x * (len / 11);
-	else*/
+	else
 		frac = x * (len / 5);
 	chunk = len - frac;
 	while (list_len(*list_b) < frac - 2)
 	{
-		while ((*list_a)->index >= chunk && (*list_a)->index != last_index
-			&& (*list_a)->index != med)
+		while ((*list_a)->index >= chunk && (*list_a)->index != last_index)
 			execute(list_a, list_b, 1, "pb");
 		execute(list_a, list_b, 1, "ra");
 	}
@@ -67,27 +64,29 @@ void	part_2(t_list **list_a, t_list **list_b)
 
 void	big_algo(t_list **list_a, t_list **list_b)
 {
-	int		med;
 	int		len;
 	int		last_index;
 	int		x;
+	int		chk;
 
+	chk = 5;
 	len = list_len(*list_a);
-	med = (len / 2);
+	if (len > 250)
+		chk = 11;
 	last_index = len;
 	x = 0;
 	index_list(*list_a);
-	while (list_len(*list_a) > 3)
+	while (list_len(*list_a) > 2)
 	{
-		while (++x < 5)
+		while (++x < chk)
 			chunk(list_a, list_b, len, x);
-		if ((*list_a)->index == 1 || (*list_a)->index == last_index
-			|| (*list_a)->index == med)
+		if ((*list_a)->index == 1 || (*list_a)->index == last_index)
 			execute(list_a, list_b, 1, "ra");
 		else
 			execute(list_a, list_b, 1, "pb");
 	}
-	small_algo(list_a, list_b);
+	if ((*list_a)->data > (*list_a)->next->data)
+		execute(list_a, list_b, 1, "sa");
 	part_2(list_a, list_b);
 	finish(list_a, list_b);
 }
