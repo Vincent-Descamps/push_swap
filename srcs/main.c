@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:26:21 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/29 15:17:49 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/10/03 10:51:28 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 		{
 			printf("list a:\n");
 			print_list(list_a);
-			printf("list b: ");
+			printf("list b:\n");
 			print_list(list_b);
 		}
 		else if (is_sorted(&list_a, &list_b) == 1)
