@@ -6,7 +6,7 @@
 /*   By: vdescamp <vdescamp@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:54:18 by vdescamp          #+#    #+#             */
-/*   Updated: 2022/09/22 12:29:37 by vdescamp         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:35:02 by vdescamp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *str)
 		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}
-	if (nb > INT_MAX || nb < INT_MIN)
+	if (sign * nb > INT_MAX || sign * nb < INT_MIN)
 		ft_error();
 	return (nb *= sign);
 }
@@ -57,6 +57,6 @@ int	ft_strcmp(const char *s1, const char *s2)
 
 char	*ft_error(void)
 {
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 	exit (0);
 }
